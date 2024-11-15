@@ -1,0 +1,36 @@
+.contenedor {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .tarea-input {
+    width: 100%;
+  }
+
+  .descripcion-truncada {
+    white-space: nowrap;           /* Evita que el texto se ajuste en varias líneas */
+    overflow: hidden;              /* Oculta el texto que no cabe en el contenedor */
+    text-overflow: ellipsis;       /* Muestra "..." al final del texto truncado */
+    max-width: 400px;              /* Ancho máximo del contenedor */
+  }
+  .checkbox-container {
+    display: flex;
+    align-items: center; /* Centra el checkbox, el texto y el icono verticalmente */
+    gap: 8px; /* Espaciado entre los elementos */
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    margin: 0; /* Elimina cualquier margen por defecto */
+  }
+  
+  .checkbox-container label {
+    margin: 0; /* Elimina márgenes en el texto */
+    font-size: 14px; /* Tamaño del texto */
+  }
+  
+  .checkbox-container i {
+    font-size: 20px; /* Tamaño del icono */
+  }

@@ -1,0 +1,13 @@
+
+<h2 mat-dialog-title>Editar tarea</h2>
+<mat-dialog-content>
+  <p>Editar tarea</p>
+  <mat-form-field>
+    <mat-label>Tarea</mat-label>
+    <input matInput [(ngModel)]="tarea().descripcion" />
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="tarea()" cdkFocusInitial>Ok</button>
+</mat-dialog-actions>

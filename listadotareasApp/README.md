@@ -1,27 +1,36 @@
 # ListadotareasApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+# Requerimientos para poder levantar el proyecto
 
-## Development server
+Es necesario tener instalado Node.js con una version compatible con angular 18
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Instalar dependencias
 
-## Code scaffolding
+Correr `npm install` para instalar dependencias del proyecto.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Angular Cli
+
+Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+
+## Servidor de desarrollo local
+
+Correr `ng serve` para correr el proyecto localmente. Navegar a `http://localhost:4200/`.
+
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Correr `ng build` para buildear el proyecto y que los archivos queden en la carpeta /dist.
 
-## Running unit tests
+## Correr Tests Unitarios
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Correr `ng test` para ejecutar los test con [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Documentacion del proyecto
+El proyecto utiliza la libreria de angular Material, e incorpora Material theme pre cargado de color azure-blue.
+Cuenta con un componente principal listado-tareas, el cual contiene un input para ingresar la tarea, un boton para agregar la tarea y un listado debajo donde irán apareciendo las tareas nuevas agregadas.
+Las tareas nuevas contienen un checkbox para marcar si la tarea fue completada, tambien un botón para eliminar la tarea y un botón para editar la misma.
 
-## Further help
+Al seleccionar el boton editar sobre una tarea se abrirá un popup con la tarea seleccionada para su edición.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Dentro del popup se puede cancelar la accion como guardar la modificación.

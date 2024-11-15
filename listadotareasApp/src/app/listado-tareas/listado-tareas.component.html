@@ -1,0 +1,26 @@
+<div class="contenedor">
+    <mat-form-field class="tarea-input" appearance="outline">
+      <mat-label>Nueva Tarea</mat-label>
+      <input matInput [(ngModel)]="nuevaTarea().descripcion" placeholder="Escribe tu tarea" (keydown.enter)="agregarTarea()">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="agregarTarea()">Agregar</button>
+  
+    <mat-list>
+      <mat-list-item *ngFor="let tarea of tareas">
+        <div class="checkbox-container">
+        <mat-checkbox 
+          [(ngModel)]="tarea.completada" 
+          (change)="marcarCompletada(tarea.id)">
+          {{ tarea.descripcion }}
+        </mat-checkbox>
+        <button mat-icon-button color="warn" (click)="eliminarTarea(tarea.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button mat-icon-button (click)="editarTarea(tarea.id, tarea.descripcion)" >
+          <mat-icon>edit</mat-icon>
+        </button>
+    </div>
+      </mat-list-item>
+    </mat-list>
+  
+  </div>
