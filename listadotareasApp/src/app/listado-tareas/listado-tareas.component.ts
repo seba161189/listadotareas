@@ -9,24 +9,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {
-  MAT_DIALOG_DATA,
   MatDialog,
-  MatDialogActions,
-  MatDialogClose,
-  MatDialogContent,
-  MatDialogRef,
-  MatDialogTitle,
 } from '@angular/material/dialog';
 import { DialogEditComponent } from '../dialog-edit/dialog-edit.component';
 @Component({
   selector: 'app-listado-tareas',
   standalone: true,
   imports: [CommonModule, FormsModule, MatFormFieldModule, MatListModule, MatIconModule, MatInputModule,
-    MatCheckboxModule, MatButtonModule,
-    MatDialogActions,
-    MatDialogClose,
-    MatDialogContent,
-    MatDialogTitle,],
+    MatCheckboxModule, MatButtonModule],
   templateUrl: './listado-tareas.component.html',
   styleUrl: './listado-tareas.component.scss'
 })
@@ -55,7 +45,7 @@ export class ListadoTareasComponent {
   editarTarea(id: number, descripcion: string): void {
 
     const dialogRef = this.dialog.open(DialogEditComponent, {
-      data: {id:id, descripcion:descripcion},
+      data: { id: id, descripcion: descripcion },
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -68,7 +58,7 @@ export class ListadoTareasComponent {
   }
 
   guardarEdicion(): void {
-    const nueva= this.nuevaTarea();
+    const nueva = this.nuevaTarea();
     const tarea = this.tareas.find(t => t.id === nueva.id);
     if (tarea) {
       tarea.descripcion = nueva.descripcion.trim();
