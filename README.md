@@ -1,4 +1,4 @@
-# listadotareas
+# listadotareas app
 
 # clonar repositorio
 Correr el comando "git clone https://github.com/seba161189/listadotareas.git"
